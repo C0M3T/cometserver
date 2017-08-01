@@ -23,7 +23,7 @@ client.connect(url, function (err, db) {
         process.exit(1);
         throw err;
     } else {
-        console.log("connected to our database")
+        console.log("connected to our database");
         machines = db.collection("test");
     }
 })
