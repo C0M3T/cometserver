@@ -15,7 +15,8 @@ app.use(cors());
 
 var client = mongodb.MongoClient;
 var machines;
-var url = process.env.MONGODB_URI || 'mongodb://Abelchalla:Abel323447@ds121543.mlab.com:21543/heroku_bqhtlgll';
+
+var url = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 
 client.connect(url, function (err, db) {
     if (err) {
@@ -24,7 +25,7 @@ client.connect(url, function (err, db) {
         throw err;
     } else {
         console.log("connected to our database");
-        
+
         machines = db.collection("test");
     }
 })
