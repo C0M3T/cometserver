@@ -15,7 +15,7 @@ app.use(cors());
 
 var client = mongodb.MongoClient;
 var orders;
-var url = process.env.MONGODB_URI || 'mongodb://localhost:27017';
+var url = process.env.MONGODB_URI || 'mongodb://Abelchalla:Abel323447@ds121543.mlab.com:21543/heroku_bqhtlgll';
 
 client.connect(url, function (err, db) {
     if (err) {
