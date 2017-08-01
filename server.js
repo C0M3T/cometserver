@@ -4,7 +4,7 @@ var logger = require("morgan")
 var bodyparser = require("body-parser");
 var cors = require("cors");
 
-var multer  = require('multer');
+var multer = require('multer');
 var upload = multer({ dest: 'uploads/' });
 
 var app = express();
@@ -24,6 +24,7 @@ client.connect(url, function (err, db) {
         throw err;
     } else {
         console.log("connected to our database");
+        
         machines = db.collection("test");
     }
 })
@@ -77,9 +78,9 @@ app.post("/pushOrder", (req, res) => {
 })
 
 app.post('/animalPic', upload.single('animal'), function (req, res, next) {
-  // req.file is the `avatar` file 
-  // req.body will hold the text fields, if there were any 
-  console.log("file:", req.file);
+    // req.file is the `avatar` file 
+    // req.body will hold the text fields, if there were any 
+    console.log("file:", req.file);
 })
 
 
