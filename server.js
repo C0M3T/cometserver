@@ -4,12 +4,12 @@ var logger = require("morgan")
 var bodyparser = require("body-parser");
 var cors = require("cors");
 
-var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
+var multer  = require('multer');
+var upload = multer({ dest: 'uploads/' });
 
 var app = express();
-app.use(bodyparser.urlencoded({ extended: false }))
-app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
 app.use(logger('dev'));
 app.use(cors());
 
